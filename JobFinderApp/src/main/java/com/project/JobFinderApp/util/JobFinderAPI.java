@@ -95,4 +95,23 @@ public class JobFinderAPI {
         }
         return results;
     }
+
+    public JSONObject suggerisciLocation () throws IOException, ParseException {
+        JobFinderAPI api = new JobFinderAPI();
+        JSONObject obj = new JSONObject();
+        Vector<String> location = new Vector<>();
+        location.add("London");
+        location.add("New York");
+        location.add("Madrid");
+        location.add("Paris");
+        location.add("Boston");
+        long numeroLavori = 0;
+        obj.put("Città suggerite",location);
+        for (String s: location) {
+            JSONObject app = api.getJobsLocation(s);
+            numeroLavori += (long) app.get("count");
+        }
+        obj.put("Numero di lavori in queste città",numeroLavori);
+        return obj;
+    }
 }
