@@ -6,12 +6,12 @@ import java.util.Vector;
 
 public class JobInfo {
 
-    String nomeCompagnia;
-    String tipoContratto;
-    String location;
-    String dataAnnuncio;
-    String source;
-    Vector<String > linguaggi;
+    private String nomeCompagnia;
+    private String tipoContratto;
+    private String location;
+    private String dataAnnuncio;
+    private String source;
+    private Vector<String > linguaggi;
 
     public JobInfo(String nomeCompagnia, String tipoContratto, String location, String dataAnnuncio, String source, Vector<String> linguaggi){
         this.nomeCompagnia = nomeCompagnia;
