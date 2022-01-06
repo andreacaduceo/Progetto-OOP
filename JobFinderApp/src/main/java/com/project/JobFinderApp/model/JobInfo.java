@@ -1,5 +1,6 @@
 package com.project.JobFinderApp.model;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.util.Vector;
@@ -11,9 +12,9 @@ public class JobInfo {
     private String location;
     private String dataAnnuncio;
     private String source;
-    private Vector<String > linguaggi;
+    private JSONArray linguaggi;
 
-    public JobInfo(String nomeCompagnia, String tipoContratto, String location, String dataAnnuncio, String source, Vector<String> linguaggi){
+    public JobInfo(String nomeCompagnia, String tipoContratto, String location, String dataAnnuncio, String source, JSONArray linguaggi){
         this.nomeCompagnia = nomeCompagnia;
         this.tipoContratto = tipoContratto;
         this.location = location;
@@ -63,11 +64,11 @@ public class JobInfo {
     }
 
 
-    public Vector<String> getLinguaggi() {
+    public JSONArray getLinguaggi() {
         return linguaggi;
     }
 
-    public void setLinguaggi(Vector<String> linguaggi) {
+    public void setLinguaggi(JSONArray linguaggi) {
         this.linguaggi = linguaggi;
     }
 

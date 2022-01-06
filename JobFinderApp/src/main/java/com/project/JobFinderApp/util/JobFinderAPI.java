@@ -1,6 +1,7 @@
 package com.project.JobFinderApp.util;
 
 
+import com.project.JobFinderApp.model.JobInfo;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -81,16 +82,17 @@ public class JobFinderAPI {
             JSONObject appObj = (JSONObject) value;
             JSONArray appArr = (JSONArray) appObj.get("results");
             for (Object o : appArr) {
-                JSONObject objFiltrato = new JSONObject();
                 JSONObject appObj2 = (JSONObject) o;
-                objFiltrato.put("Nome compagnia", appObj2.get("company_name"));
-                if(appObj2.get("employment_type")==null) objFiltrato.put("Tipo di contratto", "part time");
-                else objFiltrato.put("Tipo di contratto", appObj2.get("employment_type"));
-                objFiltrato.put("Città",appObj2.get("location"));
-                objFiltrato.put("Source",appObj2.get("source"));
-                objFiltrato.put("Data annuncio",appObj2.get("date_posted"));
-                objFiltrato.put("Linguaggi", appObj2.get("keywords"));
-                results.add(objFiltrato);
+                String nomeCompagnia = (String) appObj2.get("company_name");
+                String tipoContratto;
+                String città = (String) appObj2.get("location");
+                String source = (String) appObj2.get("source");
+                String data = (String) appObj2.get("date_posted");
+                JSONArray linguaggi = (JSONArray) appObj2.get("keywords");
+                if(appObj2.get("employment_type")==null) tipoContratto = "part time";
+                else tipoContratto = (String) appObj2.get("employment_type");
+                JobInfo jobInfo = new JobInfo(nomeCompagnia,tipoContratto,città,data,source,linguaggi);
+                results.add(jobInfo.toJSONObject());
             }
         }
         return results;
@@ -113,5 +115,13 @@ public class JobFinderAPI {
         }
         obj.put("Numero di lavori in queste città",numeroLavori);
         return obj;
+    }
+
+
+    public JSONArray filteredByContract (JSONObject città, String contratto) throws IOException, ParseException {
+        JSONArray array;
+        Filtri filter = new Filtri();
+        array = filter.filtraPerContratto(città,contratto);
+        return array;
     }
 }

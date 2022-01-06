@@ -1,6 +1,5 @@
 package com.project.JobFinderApp.controller;
 
-import com.project.JobFinderApp.model.JobInfo;
 import com.project.JobFinderApp.service.Service;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -12,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
-import java.util.Vector;
+
 
 
 @RestController
@@ -23,13 +22,18 @@ public class Controller {
 
 
     @GetMapping("/jobs")
-    public JSONArray getByLocations(@RequestBody JSONObject citta) throws IOException, ParseException {
-        return service.chiamataPiuLocation(citta);
+    public JSONArray getByLocations(@RequestBody JSONObject città) throws IOException, ParseException {
+        return service.chiamataPiuLocation(città);
     }
 
-    @GetMapping("/suggestion")
+    @GetMapping("/locationSuggestion")
     public JSONObject locationSuggestion() throws IOException, ParseException {
         return service.suggerisciLocation();
+    }
+
+    @GetMapping("/jobsByEmploymentType")
+    public JSONArray getByEmployment(@RequestBody JSONObject città, @RequestParam String contratto) throws IOException, ParseException {
+        return service.chiamataFiltrataPerContratto(città,contratto);
     }
 }
 

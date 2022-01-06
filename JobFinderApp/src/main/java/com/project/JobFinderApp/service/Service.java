@@ -26,4 +26,9 @@ public class Service {
         JSONObject objResult = api.suggerisciLocation();
         return objResult;
     }
+
+    public JSONArray chiamataFiltrataPerContratto(JSONObject città, String contratto) throws IOException, ParseException {
+        JSONArray arrayResult = api.filteredByContract(città,contratto);
+        return arrayResult;
+    }
 }
