@@ -31,4 +31,9 @@ public class Service {
         JSONArray arrayResult = api.filteredByContract(città,contratto);
         return arrayResult;
     }
+
+    public  JSONArray chiamataFiltrataPerSource(JSONObject città, String source) throws IOException, ParseException {
+        JSONArray arrayResult = api.filteredBySource(città,source);
+        return arrayResult;
+    }
 }

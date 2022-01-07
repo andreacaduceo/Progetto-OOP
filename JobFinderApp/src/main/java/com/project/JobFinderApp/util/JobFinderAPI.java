@@ -124,4 +124,11 @@ public class JobFinderAPI {
         array = filter.filtraPerContratto(città,contratto);
         return array;
     }
+
+    public JSONArray filteredBySource (JSONObject città, String source) throws IOException, ParseException {
+        JSONArray array;
+        Filtri filter = new Filtri();
+        array = filter.filtraPerSource(città,source);
+        return  array;
+    }
 }

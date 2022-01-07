@@ -20,4 +20,16 @@ public class Filtri {
         }
         return result;
     }
+
+    public JSONArray filtraPerSource(JSONObject bodyCittà, String source) throws IOException, ParseException {
+        JobFinderAPI api = new JobFinderAPI();
+        JSONArray result = new JSONArray();
+        JSONArray response = api.estraiValori(api.getMoreLocations(bodyCittà));
+        for (Object ob: response) {
+            JSONObject object = (JSONObject) ob;
+            String sourceAPI = (String) object.get("Source");
+            if(sourceAPI.equalsIgnoreCase(source)) result.add(object);
+        }
+        return result;
+    }
 }

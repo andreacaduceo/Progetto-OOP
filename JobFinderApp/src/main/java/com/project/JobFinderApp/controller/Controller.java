@@ -31,9 +31,14 @@ public class Controller {
         return service.suggerisciLocation();
     }
 
-    @GetMapping("/jobsByEmploymentType")
+    @GetMapping("/jobsByContract")
     public JSONArray getByEmployment(@RequestBody JSONObject città, @RequestParam String contratto) throws IOException, ParseException {
         return service.chiamataFiltrataPerContratto(città,contratto);
+    }
+
+    @GetMapping("/jobsBySource")
+    public JSONArray getBySource(@RequestBody JSONObject città, @RequestParam String source) throws IOException, ParseException {
+        return service.chiamataFiltrataPerSource(città,source);
     }
 }
 
