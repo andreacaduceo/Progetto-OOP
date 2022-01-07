@@ -32,4 +32,19 @@ public class Filtri {
         }
         return result;
     }
+
+        public JSONArray filtraPerLinguaggio(JSONObject bodyCittà, String linguaggio) throws IOException, ParseException {
+        JobFinderAPI api = new JobFinderAPI();
+        JSONArray result = new JSONArray();
+        JSONArray response = api.estraiValori(api.getMoreLocations(bodyCittà));
+        for (Object ob: response) {
+            JSONObject object = (JSONObject) ob;
+            JSONArray linguaggiAPI = (JSONArray) object.get("Linguaggi");
+            for (Object o: linguaggiAPI) {
+                if(o.toString().equalsIgnoreCase(linguaggio)) result.add(object);
+
+            }
+        }
+        return result;
+    }
 }

@@ -131,4 +131,11 @@ public class JobFinderAPI {
         array = filter.filtraPerSource(città,source);
         return  array;
     }
+
+    public JSONArray filteredByLanguage(JSONObject città, String linguaggio) throws IOException, ParseException {
+        JSONArray array;
+        Filtri filter = new Filtri();
+        array = filter.filtraPerLinguaggio(città,linguaggio);
+        return  array;
+    }
 }

@@ -36,4 +36,9 @@ public class Service {
         JSONArray arrayResult = api.filteredBySource(città,source);
         return arrayResult;
     }
+
+    public  JSONArray chiamataFiltrataPerLinguaggio(JSONObject città, String linguaggio) throws IOException, ParseException {
+        JSONArray arrayResult = api.filteredByLanguage(città,linguaggio);
+        return arrayResult;
+    }
 }

@@ -40,5 +40,10 @@ public class Controller {
     public JSONArray getBySource(@RequestBody JSONObject città, @RequestParam String source) throws IOException, ParseException {
         return service.chiamataFiltrataPerSource(città,source);
     }
+
+    @GetMapping("/jobsByLanguage")
+    public JSONArray getByLanguage(@RequestBody JSONObject città, @RequestParam String linguaggio) throws IOException, ParseException {
+        return service.chiamataFiltrataPerLinguaggio(città, linguaggio);
+    }
 }
 
