@@ -67,7 +67,7 @@ public class JobFinderAPI {
         JobFinderAPI finderAPI = new JobFinderAPI();
         JSONArray result = new JSONArray();
         Vector<String> nomiCitta = new Vector<>();
-        String nomiCittaDaEstrarre = (String) citta.get("nomiCitta");
+        String nomiCittaDaEstrarre = (String) citta.get("Nomi delle città");
         String[] resultArray = nomiCittaDaEstrarre.split(",");
         nomiCitta.addAll(Arrays.asList(resultArray));
         for(String x : nomiCitta) {
@@ -103,10 +103,10 @@ public class JobFinderAPI {
         JSONObject obj = new JSONObject();
         Vector<String> location = new Vector<>();
         location.add("London");
-        location.add("New York");
+        location.add("Copenaghen");
         location.add("Madrid");
         location.add("Paris");
-        location.add("Boston");
+        location.add("Amsterdam");
         long numeroLavori = 0;
         obj.put("Città suggerite",location);
         for (String s: location) {
@@ -137,5 +137,12 @@ public class JobFinderAPI {
         Filtri filter = new Filtri();
         array = filter.filtraPerLinguaggio(città,linguaggio);
         return  array;
+    }
+
+    public JSONArray statisticheGenerali(JSONObject città) throws IOException, ParseException {
+        JSONArray array;
+        Statistiche stats = new Statistiche();
+        array = stats.statisticheGenerali(città);
+        return array;
     }
 }

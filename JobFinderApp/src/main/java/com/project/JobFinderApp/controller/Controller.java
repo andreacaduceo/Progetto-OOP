@@ -45,5 +45,11 @@ public class Controller {
     public JSONArray getByLanguage(@RequestBody JSONObject città, @RequestParam String linguaggio) throws IOException, ParseException {
         return service.chiamataFiltrataPerLinguaggio(città, linguaggio);
     }
+
+    @GetMapping("/stats")
+    public JSONArray stats(@RequestBody JSONObject città) throws IOException, ParseException {
+        return service.statisticheGenerali(città);
+    }
+
 }
 

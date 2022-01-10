@@ -41,4 +41,9 @@ public class Service {
         JSONArray arrayResult = api.filteredByLanguage(città,linguaggio);
         return arrayResult;
     }
+
+    public JSONArray statisticheGenerali(JSONObject città) throws IOException, ParseException {
+        JSONArray arrayResult = api.statisticheGenerali(città);
+        return arrayResult;
+    }
 }
