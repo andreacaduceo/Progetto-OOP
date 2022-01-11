@@ -3,8 +3,6 @@ package com.project.JobFinderApp.model;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import java.util.Vector;
-
 public class JobInfo {
 
     private String nomeCompagnia;

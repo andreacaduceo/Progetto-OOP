@@ -89,8 +89,9 @@ public class JobFinderAPI {
                 String source = (String) appObj2.get("source");
                 String data = (String) appObj2.get("date_posted");
                 JSONArray linguaggi = (JSONArray) appObj2.get("keywords");
-                if(appObj2.get("employment_type")==null) tipoContratto = "part time";
+                if(appObj2.get("employment_type") == null) tipoContratto = "part time";
                 else tipoContratto = (String) appObj2.get("employment_type");
+                if(tipoContratto.equals("contract")) tipoContratto = "part time";
                 JobInfo jobInfo = new JobInfo(nomeCompagnia,tipoContratto,città,data,source,linguaggi);
                 results.add(jobInfo.toJSONObject());
             }
@@ -143,6 +144,13 @@ public class JobFinderAPI {
         JSONArray array;
         Statistiche stats = new Statistiche();
         array = stats.statisticheGenerali(città);
+        return array;
+    }
+
+    public  JSONArray statisticheFiltratePerSource(JSONObject città, String source) throws IOException, ParseException {
+        JSONArray array;
+        Statistiche stats = new Statistiche();
+        array = stats.statisticheFiltratePerSource(città, source);
         return array;
     }
 }

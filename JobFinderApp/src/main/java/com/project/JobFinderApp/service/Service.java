@@ -46,4 +46,9 @@ public class Service {
         JSONArray arrayResult = api.statisticheGenerali(città);
         return arrayResult;
     }
+
+    public JSONArray statisticheSource(JSONObject città, String source) throws IOException, ParseException {
+        JSONArray arrayResult = api.statisticheFiltratePerSource(città,source);
+        return arrayResult;
+    }
 }

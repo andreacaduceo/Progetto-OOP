@@ -51,5 +51,10 @@ public class Controller {
         return service.statisticheGenerali(città);
     }
 
+    @GetMapping("/statsBySource")
+    public JSONArray statsBySource(@RequestBody JSONObject città,@RequestParam String source) throws IOException, ParseException {
+        return service.statisticheSource(città,source);
+    }
+
 }
 
