@@ -56,5 +56,15 @@ public class Controller {
         return service.statisticheSource(città,source);
     }
 
+    @GetMapping("/statsByData")
+    public JSONArray statsByData(@RequestBody JSONObject città,@RequestParam String data) throws IOException, ParseException {
+        return service.statisticheData(città,data);
+    }
+
+    @GetMapping("/statsByRemote")
+    public JSONArray statsByRemote(@RequestBody JSONObject città, @RequestParam String remoto) throws IOException, ParseException {
+        return  service.stasticheRemoto(città,remoto);
+    }
+
 }
 

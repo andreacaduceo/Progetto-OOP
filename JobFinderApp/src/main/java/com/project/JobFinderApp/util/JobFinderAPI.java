@@ -63,7 +63,7 @@ public class JobFinderAPI {
     }
 
 
-    public JSONArray getMoreLocations (JSONObject citta) throws IOException, ParseException {
+    public JSONArray getMoreLocations (JSONObject citta)  {
         JobFinderAPI finderAPI = new JobFinderAPI();
         JSONArray result = new JSONArray();
         Vector<String> nomiCitta = new Vector<>();
@@ -71,7 +71,13 @@ public class JobFinderAPI {
         String[] resultArray = nomiCittaDaEstrarre.split(",");
         nomiCitta.addAll(Arrays.asList(resultArray));
         for(String x : nomiCitta) {
-            result.add(finderAPI.getJobsLocation(x));
+            try {
+                result.add(finderAPI.getJobsLocation(x));
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
         return result;
     }
@@ -88,11 +94,15 @@ public class JobFinderAPI {
                 String città = (String) appObj2.get("location");
                 String source = (String) appObj2.get("source");
                 String data = (String) appObj2.get("date_posted");
+                data = data.substring(0,10);
+                String remoto;
+                if((boolean) appObj2.get("remote")) remoto = "Sì";
+                else remoto = "No";
                 JSONArray linguaggi = (JSONArray) appObj2.get("keywords");
                 if(appObj2.get("employment_type") == null) tipoContratto = "part time";
                 else tipoContratto = (String) appObj2.get("employment_type");
                 if(tipoContratto.equals("contract")) tipoContratto = "part time";
-                JobInfo jobInfo = new JobInfo(nomeCompagnia,tipoContratto,città,data,source,linguaggi);
+                JobInfo jobInfo = new JobInfo(nomeCompagnia,tipoContratto,città,data,source,remoto,linguaggi);
                 results.add(jobInfo.toJSONObject());
             }
         }
@@ -151,6 +161,20 @@ public class JobFinderAPI {
         JSONArray array;
         Statistiche stats = new Statistiche();
         array = stats.statisticheFiltratePerSource(città, source);
+        return array;
+    }
+
+    public  JSONArray statisticheFiltratePerData(JSONObject città, String data) throws IOException, ParseException {
+        JSONArray array;
+        Statistiche stats = new Statistiche();
+        array = stats.statisticheFiltratePerData(città, data);
+        return array;
+    }
+
+    public JSONArray statisticheFiltratePerRemoto(JSONObject città, String remoto) throws IOException, ParseException {
+        JSONArray array;
+        Statistiche stats = new Statistiche();
+        array = stats.statisticheFiltratePerRemoto(città,remoto);
         return array;
     }
 }

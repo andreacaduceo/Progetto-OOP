@@ -51,4 +51,14 @@ public class Service {
         JSONArray arrayResult = api.statisticheFiltratePerSource(città,source);
         return arrayResult;
     }
+
+    public JSONArray statisticheData(JSONObject città, String data) throws IOException, ParseException {
+        JSONArray arrayResult = api.statisticheFiltratePerData(città, data);
+        return arrayResult;
+    }
+
+    public JSONArray stasticheRemoto(JSONObject città, String remoto) throws IOException, ParseException {
+        JSONArray arrayResult = api.statisticheFiltratePerRemoto(città, remoto);
+        return arrayResult;
+    }
 }

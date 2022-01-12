@@ -10,14 +10,19 @@ public class JobInfo {
     private String location;
     private String dataAnnuncio;
     private String source;
+    private String remoto;
     private JSONArray linguaggi;
 
-    public JobInfo(String nomeCompagnia, String tipoContratto, String location, String dataAnnuncio, String source, JSONArray linguaggi){
+
+
+
+    public JobInfo(String nomeCompagnia, String tipoContratto, String location, String dataAnnuncio, String source, String remoto, JSONArray linguaggi){
         this.nomeCompagnia = nomeCompagnia;
         this.tipoContratto = tipoContratto;
         this.location = location;
         this.dataAnnuncio = dataAnnuncio;
         this.source = source;
+        this.remoto = remoto;
         this.linguaggi = linguaggi;
     }
 
@@ -61,6 +66,9 @@ public class JobInfo {
         this.source = source;
     }
 
+    public String getRemoto() { return remoto; }
+
+    public void setRemoto(String remoto) { this.remoto = remoto; }
 
     public JSONArray getLinguaggi() {
         return linguaggi;
@@ -75,8 +83,9 @@ public class JobInfo {
         jobInfoObj.put("Nome della compagnia",nomeCompagnia);
         jobInfoObj.put("Tipo di contratto", tipoContratto);
         jobInfoObj.put("Località", location);
-        jobInfoObj.put("Data anuncio", dataAnnuncio);
+        jobInfoObj.put("Data annuncio", dataAnnuncio);
         jobInfoObj.put("Source", source);
+        jobInfoObj.put("Possibilità di lavoro da remoto", remoto);
         jobInfoObj.put("Linguaggi", linguaggi);
 
         return jobInfoObj;

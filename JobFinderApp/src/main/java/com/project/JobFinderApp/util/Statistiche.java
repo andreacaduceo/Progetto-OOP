@@ -37,8 +37,14 @@ public class Statistiche {
                     }
                 }
             }
-            partTimePercent = ((float) partTimeCounter*100 / (partTimeCounter + fullTimeCounter));
-            fullTimePercent = ((float) fullTimeCounter*100 / (partTimeCounter + fullTimeCounter));
+            if(partTimeCounter + fullTimeCounter != 0) {
+                partTimePercent = ((float) partTimeCounter*100 / (partTimeCounter + fullTimeCounter));
+                fullTimePercent = ((float) fullTimeCounter*100 / (partTimeCounter + fullTimeCounter));
+            }
+            else {
+                partTimePercent = 0;
+                fullTimePercent = 0;
+            }
             objResult.put("Località",nomiCittà.get(indiceCittà));
             objResult.put("Lavori part time(Quantità/Percentuale)",partTimeCounter + " / " + partTimePercent + "%");
             objResult.put("Lavori full time(Quantità/Percentuale)", fullTimeCounter + " / " + fullTimePercent + "%");
@@ -72,6 +78,32 @@ public class Statistiche {
         Statistiche stats = new Statistiche();
         Vector<String> nomiCittà = new Vector<>();
         String nomiCittaDaEstrarre = (String) bodyCittà.get("Nomi delle città");
+        String[] resultArray = nomiCittaDaEstrarre.split(",");
+        nomiCittà.addAll(Arrays.asList(resultArray));
+        result = stats.calcolaStatistiche(nomiCittà, response);
+        return result;
+    }
+
+    public JSONArray statisticheFiltratePerData(JSONObject bodyCittà, String data) throws IOException, ParseException {
+        JSONArray result, response;
+        Filtri filter = new Filtri();
+        response = filter.filtraPerData(bodyCittà, data);
+        Statistiche stats = new Statistiche();
+        Vector<String> nomiCittà = new Vector<>();
+        String nomiCittaDaEstrarre = (String) bodyCittà.get("Nomi delle città");
+        String[] resultArray = nomiCittaDaEstrarre.split(",");
+        nomiCittà.addAll(Arrays.asList(resultArray));
+        result = stats.calcolaStatistiche(nomiCittà, response);
+        return result;
+    }
+
+    public JSONArray statisticheFiltratePerRemoto(JSONObject città, String remoto) throws IOException, ParseException {
+        JSONArray result, response;
+        Filtri filter = new Filtri();
+        response = filter.filtraPerRemoto(città, remoto);
+        Statistiche stats = new Statistiche();
+        Vector<String> nomiCittà = new Vector<>();
+        String nomiCittaDaEstrarre = (String) città.get("Nomi delle città");
         String[] resultArray = nomiCittaDaEstrarre.split(",");
         nomiCittà.addAll(Arrays.asList(resultArray));
         result = stats.calcolaStatistiche(nomiCittà, response);
