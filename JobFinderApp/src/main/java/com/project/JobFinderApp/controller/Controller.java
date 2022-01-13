@@ -22,8 +22,8 @@ public class Controller {
 
 
     @GetMapping("/jobs")
-    public JSONArray getByLocations(@RequestBody JSONObject città) throws IOException, ParseException {
-        return service.chiamataPiuLocation(città);
+    public JSONArray getByLocations(@RequestBody JSONObject citta) throws IOException, ParseException {
+        return service.chiamataPiuLocation(citta);
     }
 
     @GetMapping("/locationSuggestion")
@@ -32,38 +32,38 @@ public class Controller {
     }
 
     @GetMapping("/jobsByContract")
-    public JSONArray getByEmployment(@RequestBody JSONObject città, @RequestParam String contratto) throws IOException, ParseException {
-        return service.chiamataFiltrataPerContratto(città,contratto);
+    public JSONArray getByEmployment(@RequestBody JSONObject citta, @RequestParam String contratto) throws IOException, ParseException {
+        return service.chiamataFiltrataPerContratto(citta,contratto);
     }
 
     @GetMapping("/jobsBySource")
-    public JSONArray getBySource(@RequestBody JSONObject città, @RequestParam String source) throws IOException, ParseException {
-        return service.chiamataFiltrataPerSource(città,source);
+    public JSONArray getBySource(@RequestBody JSONObject citta, @RequestParam String source) throws IOException, ParseException {
+        return service.chiamataFiltrataPerSource(citta,source);
     }
 
     @GetMapping("/jobsByLanguage")
-    public JSONArray getByLanguage(@RequestBody JSONObject città, @RequestParam String linguaggio) throws IOException, ParseException {
-        return service.chiamataFiltrataPerLinguaggio(città, linguaggio);
+    public JSONArray getByLanguage(@RequestBody JSONObject citta, @RequestParam String linguaggio) throws IOException, ParseException {
+        return service.chiamataFiltrataPerLinguaggio(citta, linguaggio);
     }
 
     @GetMapping("/stats")
-    public JSONArray stats(@RequestBody JSONObject città) throws IOException, ParseException {
-        return service.statisticheGenerali(città);
+    public JSONArray stats(@RequestBody JSONObject citta) throws IOException, ParseException {
+        return service.statisticheGenerali(citta);
     }
 
     @GetMapping("/statsBySource")
-    public JSONArray statsBySource(@RequestBody JSONObject città,@RequestParam String source) throws IOException, ParseException {
-        return service.statisticheSource(città,source);
+    public JSONArray statsBySource(@RequestBody JSONObject citta,@RequestParam String source) throws IOException, ParseException {
+        return service.statisticheSource(citta,source);
     }
 
     @GetMapping("/statsByData")
-    public JSONArray statsByData(@RequestBody JSONObject città,@RequestParam String data) throws IOException, ParseException {
-        return service.statisticheData(città,data);
+    public JSONArray statsByData(@RequestBody JSONObject citta,@RequestParam String data) throws IOException, ParseException {
+        return service.statisticheData(citta,data);
     }
 
     @GetMapping("/statsByRemote")
-    public JSONArray statsByRemote(@RequestBody JSONObject città, @RequestParam String remoto) throws IOException, ParseException {
-        return  service.stasticheRemoto(città,remoto);
+    public JSONArray statsByRemote(@RequestBody JSONObject citta, @RequestParam String remoto) throws IOException, ParseException {
+        return  service.stasticheRemoto(citta,remoto);
     }
 
 }

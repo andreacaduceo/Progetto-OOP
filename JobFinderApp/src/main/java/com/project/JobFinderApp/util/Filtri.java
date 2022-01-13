@@ -3,16 +3,14 @@ package com.project.JobFinderApp.util;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.ParseException;
 
-import java.io.IOException;
 
 public class Filtri {
 
-    public JSONArray filtraPerContratto(JSONObject bodyCittà, String contratto) throws IOException, ParseException {
+    public JSONArray filtraPerContratto(JSONObject bodyCitta, String contratto) {
         JobFinderAPI api = new JobFinderAPI();
         JSONArray result = new JSONArray();
-        JSONArray response = api.estraiValori(api.getMoreLocations(bodyCittà));
+        JSONArray response = api.estraiValori(api.getMoreLocations(bodyCitta));
         for (Object ob : response) {
             JSONObject object = (JSONObject) ob;
             String employmentType = (String) object.get("Tipo di contratto");
@@ -21,10 +19,10 @@ public class Filtri {
         return result;
     }
 
-    public JSONArray filtraPerSource(JSONObject bodyCittà, String source) throws IOException, ParseException {
+    public JSONArray filtraPerSource(JSONObject bodyCitta, String source) {
         JobFinderAPI api = new JobFinderAPI();
         JSONArray result = new JSONArray();
-        JSONArray response = api.estraiValori(api.getMoreLocations(bodyCittà));
+        JSONArray response = api.estraiValori(api.getMoreLocations(bodyCitta));
         for (Object ob : response) {
             JSONObject object = (JSONObject) ob;
             String sourceAPI = (String) object.get("Source");
@@ -33,10 +31,10 @@ public class Filtri {
         return result;
     }
 
-    public JSONArray filtraPerLinguaggio(JSONObject bodyCittà, String linguaggio) throws IOException, ParseException {
+    public JSONArray filtraPerLinguaggio(JSONObject bodyCitta, String linguaggio) {
         JobFinderAPI api = new JobFinderAPI();
         JSONArray result = new JSONArray();
-        JSONArray response = api.estraiValori(api.getMoreLocations(bodyCittà));
+        JSONArray response = api.estraiValori(api.getMoreLocations(bodyCitta));
         for (Object ob : response) {
             JSONObject object = (JSONObject) ob;
             JSONArray linguaggiAPI = (JSONArray) object.get("Linguaggi");
@@ -48,10 +46,10 @@ public class Filtri {
         return result;
     }
 
-    public JSONArray filtraPerData(JSONObject bodyCittà, String data) throws IOException, ParseException {
+    public JSONArray filtraPerData(JSONObject bodyCitta, String data) {
         JobFinderAPI api = new JobFinderAPI();
         JSONArray result = new JSONArray();
-        JSONArray response = api.estraiValori(api.getMoreLocations(bodyCittà));
+        JSONArray response = api.estraiValori(api.getMoreLocations(bodyCitta));
         for (Object ob : response) {
             JSONObject object = (JSONObject) ob;
             String dataAPI = (String) object.get("Data annuncio");
@@ -60,14 +58,14 @@ public class Filtri {
         return result;
     }
 
-    public JSONArray filtraPerRemoto(JSONObject bodyCittà, String remoto) throws IOException, ParseException {
+    public JSONArray filtraPerRemoto(JSONObject bodyCitta, String remoto) {
         JobFinderAPI api = new JobFinderAPI();
         JSONArray result = new JSONArray();
-        JSONArray response = api.estraiValori(api.getMoreLocations(bodyCittà));
+        JSONArray response = api.estraiValori(api.getMoreLocations(bodyCitta));
         for (Object o : response) {
             JSONObject castedOb = (JSONObject) o;
-            String remotoAPI = (String) castedOb.get("Possibilità di lavoro da remoto");
-            if (remotoAPI.equals(remoto)) result.add(castedOb);
+            String remotoAPI = (String) castedOb.get("Lavoro da remoto");
+            if (remotoAPI.equalsIgnoreCase(remoto)) result.add(castedOb);
         }
         return result;
     }

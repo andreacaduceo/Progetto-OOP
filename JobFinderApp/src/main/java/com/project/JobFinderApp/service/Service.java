@@ -1,6 +1,5 @@
 package com.project.JobFinderApp.service;
 
-import com.project.JobFinderApp.model.JobInfo;
 import com.project.JobFinderApp.util.JobFinderAPI;
 
 import org.json.simple.JSONArray;
@@ -9,7 +8,6 @@ import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-import java.util.Vector;
 
 
 @Component
@@ -17,48 +15,39 @@ public class Service {
 
     JobFinderAPI api = new JobFinderAPI();
 
-    public JSONArray chiamataPiuLocation(JSONObject nomiCitta) throws IOException, ParseException {
-        JSONArray arrayResult = api.estraiValori(api.getMoreLocations(nomiCitta));
-        return arrayResult;
+    public JSONArray chiamataPiuLocation(JSONObject nomiCitta) {
+        return api.estraiValori(api.getMoreLocations(nomiCitta));
     }
 
     public JSONObject suggerisciLocation() throws IOException, ParseException {
-        JSONObject objResult = api.suggerisciLocation();
-        return objResult;
+        return api.suggerisciLocation();
     }
 
-    public JSONArray chiamataFiltrataPerContratto(JSONObject città, String contratto) throws IOException, ParseException {
-        JSONArray arrayResult = api.filteredByContract(città,contratto);
-        return arrayResult;
+    public JSONArray chiamataFiltrataPerContratto(JSONObject citta, String contratto) throws IOException, ParseException {
+        return api.filteredByContract(citta, contratto);
     }
 
-    public  JSONArray chiamataFiltrataPerSource(JSONObject città, String source) throws IOException, ParseException {
-        JSONArray arrayResult = api.filteredBySource(città,source);
-        return arrayResult;
+    public JSONArray chiamataFiltrataPerSource(JSONObject citta, String source) throws IOException, ParseException {
+        return api.filteredBySource(citta, source);
     }
 
-    public  JSONArray chiamataFiltrataPerLinguaggio(JSONObject città, String linguaggio) throws IOException, ParseException {
-        JSONArray arrayResult = api.filteredByLanguage(città,linguaggio);
-        return arrayResult;
+    public JSONArray chiamataFiltrataPerLinguaggio(JSONObject citta, String linguaggio) throws IOException, ParseException {
+        return api.filteredByLanguage(citta, linguaggio);
     }
 
-    public JSONArray statisticheGenerali(JSONObject città) throws IOException, ParseException {
-        JSONArray arrayResult = api.statisticheGenerali(città);
-        return arrayResult;
+    public JSONArray statisticheGenerali(JSONObject citta) throws IOException, ParseException {
+        return api.statisticheGenerali(citta);
     }
 
-    public JSONArray statisticheSource(JSONObject città, String source) throws IOException, ParseException {
-        JSONArray arrayResult = api.statisticheFiltratePerSource(città,source);
-        return arrayResult;
+    public JSONArray statisticheSource(JSONObject citta, String source) throws IOException, ParseException {
+        return api.statisticheFiltratePerSource(citta, source);
     }
 
-    public JSONArray statisticheData(JSONObject città, String data) throws IOException, ParseException {
-        JSONArray arrayResult = api.statisticheFiltratePerData(città, data);
-        return arrayResult;
+    public JSONArray statisticheData(JSONObject citta, String data) throws IOException, ParseException {
+        return api.statisticheFiltratePerData(citta, data);
     }
 
-    public JSONArray stasticheRemoto(JSONObject città, String remoto) throws IOException, ParseException {
-        JSONArray arrayResult = api.statisticheFiltratePerRemoto(città, remoto);
-        return arrayResult;
+    public JSONArray stasticheRemoto(JSONObject citta, String remoto) throws IOException, ParseException {
+        return api.statisticheFiltratePerRemoto(citta, remoto);
     }
 }

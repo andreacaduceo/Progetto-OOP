@@ -85,7 +85,7 @@ public class JobInfo {
         jobInfoObj.put("Località", location);
         jobInfoObj.put("Data annuncio", dataAnnuncio);
         jobInfoObj.put("Source", source);
-        jobInfoObj.put("Possibilità di lavoro da remoto", remoto);
+        jobInfoObj.put("Lavoro da remoto", remoto);
         jobInfoObj.put("Linguaggi", linguaggi);
 
         return jobInfoObj;
