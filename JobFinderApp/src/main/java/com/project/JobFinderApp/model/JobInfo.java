@@ -14,9 +14,7 @@ public class JobInfo {
     private JSONArray linguaggi;
 
 
-
-
-    public JobInfo(String nomeCompagnia, String tipoContratto, String location, String dataAnnuncio, String source, String remoto, JSONArray linguaggi){
+    public JobInfo(String nomeCompagnia, String tipoContratto, String location, String dataAnnuncio, String source, String remoto, JSONArray linguaggi) {
         this.nomeCompagnia = nomeCompagnia;
         this.tipoContratto = tipoContratto;
         this.location = location;
@@ -66,9 +64,13 @@ public class JobInfo {
         this.source = source;
     }
 
-    public String getRemoto() { return remoto; }
+    public String getRemoto() {
+        return remoto;
+    }
 
-    public void setRemoto(String remoto) { this.remoto = remoto; }
+    public void setRemoto(String remoto) {
+        this.remoto = remoto;
+    }
 
     public JSONArray getLinguaggi() {
         return linguaggi;
@@ -78,9 +80,9 @@ public class JobInfo {
         this.linguaggi = linguaggi;
     }
 
-    public JSONObject toJSONObject () {
+    public JSONObject toJSONObject() {
         JSONObject jobInfoObj = new JSONObject();
-        jobInfoObj.put("Nome della compagnia",nomeCompagnia);
+        jobInfoObj.put("Nome della compagnia", nomeCompagnia);
         jobInfoObj.put("Tipo di contratto", tipoContratto);
         jobInfoObj.put("Località", location);
         jobInfoObj.put("Data annuncio", dataAnnuncio);

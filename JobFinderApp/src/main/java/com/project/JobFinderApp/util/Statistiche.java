@@ -1,6 +1,7 @@
 package com.project.JobFinderApp.util;
 
 import com.project.JobFinderApp.exception.DataException;
+import com.project.JobFinderApp.exception.ParamException;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -76,7 +77,7 @@ public class Statistiche {
     }
 
 
-    public JSONArray statisticheFiltratePerSource(JSONObject bodyCitta, String source) {
+    public JSONArray statisticheFiltratePerSource(JSONObject bodyCitta, String source) throws ParamException {
         JSONArray response;
         Filtri filter = new Filtri();
         response = filter.filtraPerSource(bodyCitta, source);
@@ -84,7 +85,7 @@ public class Statistiche {
     }
 
 
-    public JSONArray statisticheFiltratePerData(JSONObject bodyCitta, String data) throws DataException {
+    public JSONArray statisticheFiltratePerData(JSONObject bodyCitta, String data) throws DataException, ParamException {
         JSONArray response;
         Filtri filter = new Filtri();
         response = filter.filtraPerData(bodyCitta, data);
@@ -92,7 +93,7 @@ public class Statistiche {
     }
 
 
-    public JSONArray statisticheFiltratePerRemoto(JSONObject citta, String remoto) {
+    public JSONArray statisticheFiltratePerRemoto(JSONObject citta, String remoto) throws ParamException {
         JSONArray response;
         Filtri filter = new Filtri();
         response = filter.filtraPerRemoto(citta, remoto);

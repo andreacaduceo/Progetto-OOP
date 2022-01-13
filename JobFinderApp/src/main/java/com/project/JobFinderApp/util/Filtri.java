@@ -2,15 +2,15 @@ package com.project.JobFinderApp.util;
 
 
 import com.project.JobFinderApp.exception.DataException;
+import com.project.JobFinderApp.exception.ParamException;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-
-import java.util.regex.Pattern;
 
 
 public class Filtri {
 
-    public JSONArray filtraPerContratto(JSONObject bodyCitta, String contratto) {
+    public JSONArray filtraPerContratto(JSONObject bodyCitta, String contratto) throws ParamException {
+        if(contratto.isBlank()) throw new ParamException();
         JobFinderAPI api = new JobFinderAPI();
         JSONArray result = new JSONArray();
         JSONArray response = api.estraiValori(api.getMoreLocations(bodyCitta));
@@ -22,7 +22,8 @@ public class Filtri {
         return result;
     }
 
-    public JSONArray filtraPerSource(JSONObject bodyCitta, String source) {
+    public JSONArray filtraPerSource(JSONObject bodyCitta, String source) throws ParamException {
+        if(source.isBlank()) throw  new ParamException();
         JobFinderAPI api = new JobFinderAPI();
         JSONArray result = new JSONArray();
         JSONArray response = api.estraiValori(api.getMoreLocations(bodyCitta));
@@ -34,7 +35,8 @@ public class Filtri {
         return result;
     }
 
-    public JSONArray filtraPerLinguaggio(JSONObject bodyCitta, String linguaggio) {
+    public JSONArray filtraPerLinguaggio(JSONObject bodyCitta, String linguaggio) throws ParamException {
+        if(linguaggio.isBlank()) throw new ParamException();
         JobFinderAPI api = new JobFinderAPI();
         JSONArray result = new JSONArray();
         JSONArray response = api.estraiValori(api.getMoreLocations(bodyCitta));
@@ -49,8 +51,9 @@ public class Filtri {
         return result;
     }
 
-    public JSONArray filtraPerData(JSONObject bodyCitta, String data) throws DataException {
-        if(data.charAt(4) != '-' || data.charAt(7) != '-'){
+    public JSONArray filtraPerData(JSONObject bodyCitta, String data) throws DataException, ParamException {
+        if(data.isBlank()) throw new ParamException();
+        if (data.charAt(4) != '-' || data.charAt(7) != '-') {
             throw new DataException();
         }
         JobFinderAPI api = new JobFinderAPI();
@@ -64,7 +67,8 @@ public class Filtri {
         return result;
     }
 
-    public JSONArray filtraPerRemoto(JSONObject bodyCitta, String remoto) {
+    public JSONArray filtraPerRemoto(JSONObject bodyCitta, String remoto) throws ParamException {
+        if(remoto.isBlank()) throw new ParamException();
         JobFinderAPI api = new JobFinderAPI();
         JSONArray result = new JSONArray();
         JSONArray response = api.estraiValori(api.getMoreLocations(bodyCitta));

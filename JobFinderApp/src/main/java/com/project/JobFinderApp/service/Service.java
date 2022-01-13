@@ -1,6 +1,7 @@
 package com.project.JobFinderApp.service;
 
 import com.project.JobFinderApp.exception.DataException;
+import com.project.JobFinderApp.exception.ParamException;
 import com.project.JobFinderApp.util.JobFinderAPI;
 
 import org.json.simple.JSONArray;
@@ -24,31 +25,31 @@ public class Service {
         return api.suggerisciLocation();
     }
 
-    public JSONArray chiamataFiltrataPerContratto(JSONObject citta, String contratto) throws IOException, ParseException {
+    public JSONArray chiamataFiltrataPerContratto(JSONObject citta, String contratto) throws  ParamException {
         return api.filteredByContract(citta, contratto);
     }
 
-    public JSONArray chiamataFiltrataPerSource(JSONObject citta, String source) throws IOException, ParseException {
+    public JSONArray chiamataFiltrataPerSource(JSONObject citta, String source) throws ParamException {
         return api.filteredBySource(citta, source);
     }
 
-    public JSONArray chiamataFiltrataPerLinguaggio(JSONObject citta, String linguaggio) throws IOException, ParseException {
+    public JSONArray chiamataFiltrataPerLinguaggio(JSONObject citta, String linguaggio) throws ParamException {
         return api.filteredByLanguage(citta, linguaggio);
     }
 
-    public JSONArray statisticheGenerali(JSONObject citta) throws IOException, ParseException {
+    public JSONArray statisticheGenerali(JSONObject citta) {
         return api.statisticheGenerali(citta);
     }
 
-    public JSONArray statisticheSource(JSONObject citta, String source) throws IOException, ParseException {
+    public JSONArray statisticheSource(JSONObject citta, String source) throws ParamException {
         return api.statisticheFiltratePerSource(citta, source);
     }
 
-    public JSONArray statisticheData(JSONObject citta, String data) throws IOException, ParseException, DataException {
+    public JSONArray statisticheData(JSONObject citta, String data) throws DataException, ParamException {
         return api.statisticheFiltratePerData(citta, data);
     }
 
-    public JSONArray stasticheRemoto(JSONObject citta, String remoto) throws IOException, ParseException {
+    public JSONArray stasticheRemoto(JSONObject citta, String remoto) throws ParamException {
         return api.statisticheFiltratePerRemoto(citta, remoto);
     }
 }
