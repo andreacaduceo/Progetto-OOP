@@ -1,5 +1,6 @@
 package com.project.JobFinderApp.controller;
 
+import com.project.JobFinderApp.exception.DataException;
 import com.project.JobFinderApp.service.Service;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -57,7 +58,7 @@ public class Controller {
     }
 
     @GetMapping("/statsByData")
-    public JSONArray statsByData(@RequestBody JSONObject citta,@RequestParam String data) throws IOException, ParseException {
+    public JSONArray statsByData(@RequestBody JSONObject citta,@RequestParam String data) throws IOException, ParseException, DataException {
         return service.statisticheData(citta,data);
     }
 

@@ -1,5 +1,6 @@
 package com.project.JobFinderApp.service;
 
+import com.project.JobFinderApp.exception.DataException;
 import com.project.JobFinderApp.util.JobFinderAPI;
 
 import org.json.simple.JSONArray;
@@ -43,7 +44,7 @@ public class Service {
         return api.statisticheFiltratePerSource(citta, source);
     }
 
-    public JSONArray statisticheData(JSONObject citta, String data) throws IOException, ParseException {
+    public JSONArray statisticheData(JSONObject citta, String data) throws IOException, ParseException, DataException {
         return api.statisticheFiltratePerData(citta, data);
     }
 

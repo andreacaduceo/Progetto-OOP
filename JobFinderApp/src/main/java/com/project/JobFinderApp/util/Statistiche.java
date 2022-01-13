@@ -1,5 +1,6 @@
 package com.project.JobFinderApp.util;
 
+import com.project.JobFinderApp.exception.DataException;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -83,7 +84,7 @@ public class Statistiche {
     }
 
 
-    public JSONArray statisticheFiltratePerData(JSONObject bodyCitta, String data) {
+    public JSONArray statisticheFiltratePerData(JSONObject bodyCitta, String data) throws DataException {
         JSONArray response;
         Filtri filter = new Filtri();
         response = filter.filtraPerData(bodyCitta, data);

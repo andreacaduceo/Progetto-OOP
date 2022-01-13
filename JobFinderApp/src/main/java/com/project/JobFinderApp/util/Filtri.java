@@ -1,8 +1,11 @@
 package com.project.JobFinderApp.util;
 
 
+import com.project.JobFinderApp.exception.DataException;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+
+import java.util.regex.Pattern;
 
 
 public class Filtri {
@@ -46,7 +49,10 @@ public class Filtri {
         return result;
     }
 
-    public JSONArray filtraPerData(JSONObject bodyCitta, String data) {
+    public JSONArray filtraPerData(JSONObject bodyCitta, String data) throws DataException {
+        if(data.charAt(4) != '-' || data.charAt(7) != '-'){
+            throw new DataException();
+        }
         JobFinderAPI api = new JobFinderAPI();
         JSONArray result = new JSONArray();
         JSONArray response = api.estraiValori(api.getMoreLocations(bodyCitta));
