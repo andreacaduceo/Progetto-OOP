@@ -1,6 +1,7 @@
 package com.project.JobFinderApp.util;
 
 import com.project.JobFinderApp.exception.DataException;
+import com.project.JobFinderApp.exception.CityException;
 import com.project.JobFinderApp.exception.ParamException;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -52,13 +53,13 @@ public class Statistiche {
             if (partTimeCounter + fullTimeCounter != 0) {
                 partTimePercent = ((float) partTimeCounter * 100 / (partTimeCounter + fullTimeCounter));
                 fullTimePercent = ((float) fullTimeCounter * 100 / (partTimeCounter + fullTimeCounter));
+                objResult.put("Lavori part time Quantità/Percentuale)", partTimeCounter + " / " + partTimePercent + "%");
+                objResult.put("Lavori full time (Quantità/Percentuale)", fullTimeCounter + " / " + fullTimePercent + "%");
             } else {
-                partTimePercent = 0;
-                fullTimePercent = 0;
+                objResult.put("Lavori part time (Quantità/Percentuale)", partTimeCounter + " / Percentuale non disponibile");
+                objResult.put("Lavori full time (Quantità/Percentuale)", fullTimeCounter + " / Percentuale non disponibile");
             }
             objResult.put("Località", nomiCitta.get(indiceCitta));
-            objResult.put("Lavori part time(Quantità/Percentuale)", partTimeCounter + " / " + partTimePercent + "%");
-            objResult.put("Lavori full time(Quantità/Percentuale)", fullTimeCounter + " / " + fullTimePercent + "%");
             objResult.put("Source disponibili", source.toString());
             objResult.put("Numero di linguaggi disponibili", linguaggi.size());
             objResult.put("Linguaggi disponibili", linguaggi.toString());
@@ -69,7 +70,7 @@ public class Statistiche {
     }
 
 
-    public JSONArray statisticheGenerali(JSONObject bodyCitta) {
+    public JSONArray statisticheGenerali(JSONObject bodyCitta) throws CityException {
         JSONArray response;
         JobFinderAPI finderAPI = new JobFinderAPI();
         response = finderAPI.estraiValori(finderAPI.getMoreLocations(bodyCitta));
@@ -85,7 +86,7 @@ public class Statistiche {
     }
 
 
-    public JSONArray statisticheFiltratePerData(JSONObject bodyCitta, String data) throws DataException, ParamException {
+    public JSONArray statisticheFiltratePerData(JSONObject bodyCitta, String data) throws DataException, ParamException, CityException {
         JSONArray response;
         Filtri filter = new Filtri();
         response = filter.filtraPerData(bodyCitta, data);
@@ -93,7 +94,7 @@ public class Statistiche {
     }
 
 
-    public JSONArray statisticheFiltratePerRemoto(JSONObject citta, String remoto) throws ParamException {
+    public JSONArray statisticheFiltratePerRemoto(JSONObject citta, String remoto) throws ParamException, CityException {
         JSONArray response;
         Filtri filter = new Filtri();
         response = filter.filtraPerRemoto(citta, remoto);

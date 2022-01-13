@@ -1,6 +1,7 @@
 package com.project.JobFinderApp.util;
 
 
+import com.project.JobFinderApp.exception.CityException;
 import com.project.JobFinderApp.exception.DataException;
 import com.project.JobFinderApp.exception.ParamException;
 import com.project.JobFinderApp.model.JobInfo;
@@ -65,7 +66,8 @@ public class JobFinderAPI {
     }
 
 
-    public JSONArray getMoreLocations(JSONObject citta) {
+    public JSONArray getMoreLocations(JSONObject citta) throws CityException {
+        if(citta.isEmpty()) throw new CityException();
         JobFinderAPI finderAPI = new JobFinderAPI();
         JSONArray result = new JSONArray();
         Vector<String> nomiCitta = new Vector<>();
@@ -79,6 +81,7 @@ public class JobFinderAPI {
                 e.printStackTrace();
             }
         }
+        if(result.isEmpty()) throw new CityException();
         return result;
     }
 
@@ -129,28 +132,28 @@ public class JobFinderAPI {
     }
 
 
-    public JSONArray filteredByContract(JSONObject citta, String contratto) throws ParamException {
+    public JSONArray filteredByContract(JSONObject citta, String contratto) throws ParamException, CityException {
         JSONArray array;
         Filtri filter = new Filtri();
         array = filter.filtraPerContratto(citta, contratto);
         return array;
     }
 
-    public JSONArray filteredBySource(JSONObject citta, String source) throws ParamException {
+    public JSONArray filteredBySource(JSONObject citta, String source) throws ParamException, CityException {
         JSONArray array;
         Filtri filter = new Filtri();
         array = filter.filtraPerSource(citta, source);
         return array;
     }
 
-    public JSONArray filteredByLanguage(JSONObject citta, String linguaggio) throws ParamException {
+    public JSONArray filteredByLanguage(JSONObject citta, String linguaggio) throws ParamException, CityException {
         JSONArray array;
         Filtri filter = new Filtri();
         array = filter.filtraPerLinguaggio(citta, linguaggio);
         return array;
     }
 
-    public JSONArray statisticheGenerali(JSONObject citta)  {
+    public JSONArray statisticheGenerali(JSONObject citta) throws CityException {
         JSONArray array;
         Statistiche stats = new Statistiche();
         array = stats.statisticheGenerali(citta);
@@ -164,14 +167,14 @@ public class JobFinderAPI {
         return array;
     }
 
-    public JSONArray statisticheFiltratePerData(JSONObject citta, String data) throws DataException, ParamException {
+    public JSONArray statisticheFiltratePerData(JSONObject citta, String data) throws DataException, ParamException, CityException {
         JSONArray array;
         Statistiche stats = new Statistiche();
         array = stats.statisticheFiltratePerData(citta, data);
         return array;
     }
 
-    public JSONArray statisticheFiltratePerRemoto(JSONObject citta, String remoto) throws ParamException {
+    public JSONArray statisticheFiltratePerRemoto(JSONObject citta, String remoto) throws ParamException, CityException {
         JSONArray array;
         Statistiche stats = new Statistiche();
         array = stats.statisticheFiltratePerRemoto(citta, remoto);
