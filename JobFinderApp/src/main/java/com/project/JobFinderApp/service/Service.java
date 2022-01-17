@@ -18,13 +18,14 @@ public class Service {
 
     JobFinderAPI api = new JobFinderAPI();
 
-    public JSONArray chiamataPiuLocation(JSONObject nomiCitta) throws CityException {
+    public JSONArray chiamataPiuLocation( JSONObject nomiCitta) throws CityException {
         return api.estraiValori(api.getMoreLocations(nomiCitta));
     }
 
     public JSONObject suggerisciLocation() throws IOException, ParseException {
         return api.suggerisciLocation();
     }
+
 
     public JSONArray chiamataFiltrataPerContratto(JSONObject citta, String contratto) throws ParamException, CityException {
         return api.filteredByContract(citta, contratto);

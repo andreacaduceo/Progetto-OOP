@@ -25,7 +25,7 @@ public class Controller {
 
     @GetMapping("/jobs")
     public JSONArray getByLocations(@RequestBody JSONObject citta) throws CityException {
-        return service.chiamataPiuLocation(citta);
+        return service.chiamataPiuLocation (citta);
     }
 
     @GetMapping("/locationSuggestion")
