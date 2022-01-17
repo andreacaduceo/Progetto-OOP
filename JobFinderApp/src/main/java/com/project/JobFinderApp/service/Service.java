@@ -42,7 +42,7 @@ public class Service {
         return api.statisticheGenerali(citta);
     }
 
-    public JSONArray statisticheSource(JSONObject citta, String source) throws ParamException {
+    public JSONArray statisticheSource(JSONObject citta, String source) throws ParamException, CityException {
         return api.statisticheFiltratePerSource(citta, source);
     }
 

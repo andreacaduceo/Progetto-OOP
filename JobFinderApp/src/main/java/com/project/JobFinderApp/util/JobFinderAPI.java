@@ -67,7 +67,7 @@ public class JobFinderAPI {
 
 
     public JSONArray getMoreLocations(JSONObject citta) throws CityException {
-        if(citta.isEmpty()) throw new CityException();
+        if(citta.get("Nomi delle città").toString().isEmpty()) throw new CityException();
         JobFinderAPI finderAPI = new JobFinderAPI();
         JSONArray result = new JSONArray();
         Vector<String> nomiCitta = new Vector<>();
@@ -81,7 +81,8 @@ public class JobFinderAPI {
                 e.printStackTrace();
             }
         }
-        if(result.isEmpty()) throw new CityException();
+        JSONObject obCheck = (JSONObject) result.get(0);
+        if((long) obCheck.get("count") == 0)throw new CityException();
         return result;
     }
 
@@ -160,7 +161,7 @@ public class JobFinderAPI {
         return array;
     }
 
-    public JSONArray statisticheFiltratePerSource(JSONObject citta, String source) throws ParamException {
+    public JSONArray statisticheFiltratePerSource(JSONObject citta, String source) throws ParamException, CityException {
         JSONArray array;
         Statistiche stats = new Statistiche();
         array = stats.statisticheFiltratePerSource(citta, source);

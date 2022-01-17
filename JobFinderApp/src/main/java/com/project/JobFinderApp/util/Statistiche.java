@@ -78,7 +78,7 @@ public class Statistiche {
     }
 
 
-    public JSONArray statisticheFiltratePerSource(JSONObject bodyCitta, String source) throws ParamException {
+    public JSONArray statisticheFiltratePerSource(JSONObject bodyCitta, String source) throws ParamException, CityException {
         JSONArray response;
         Filtri filter = new Filtri();
         response = filter.filtraPerSource(bodyCitta, source);

@@ -54,7 +54,7 @@ public class Controller {
     }
 
     @GetMapping("/statsBySource")
-    public JSONArray statsBySource(@RequestBody JSONObject citta, @RequestParam String source) throws ParamException {
+    public JSONArray statsBySource(@RequestBody JSONObject citta, @RequestParam String source) throws ParamException, CityException {
         return service.statisticheSource(citta, source);
     }
 
