@@ -8,10 +8,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 
@@ -23,7 +20,7 @@ public class Controller {
     Service service;
 
 
-    @GetMapping("/jobs")
+    @PostMapping("/jobs")
     public JSONArray getByLocations(@RequestBody JSONObject citta) throws CityException {
         return service.chiamataPiuLocation(citta);
     }
@@ -33,37 +30,37 @@ public class Controller {
         return service.suggerisciLocation();
     }
 
-    @GetMapping("/jobsByContract")
+    @PostMapping("/jobsByContract")
     public JSONArray getByEmployment(@RequestBody JSONObject citta, @RequestParam String contratto) throws ParamException, CityException {
         return service.chiamataFiltrataPerContratto(citta, contratto);
     }
 
-    @GetMapping("/jobsBySource")
+    @PostMapping("/jobsBySource")
     public JSONArray getBySource(@RequestBody JSONObject citta, @RequestParam String source) throws ParamException, CityException {
         return service.chiamataFiltrataPerSource(citta, source);
     }
 
-    @GetMapping("/jobsByLanguage")
+    @PostMapping("/jobsByLanguage")
     public JSONArray getByLanguage(@RequestBody JSONObject citta, @RequestParam String linguaggio) throws ParamException, CityException {
         return service.chiamataFiltrataPerLinguaggio(citta, linguaggio);
     }
 
-    @GetMapping("/stats")
+    @PostMapping("/stats")
     public JSONArray stats(@RequestBody JSONObject citta) throws CityException {
         return service.statisticheGenerali(citta);
     }
 
-    @GetMapping("/statsBySource")
+    @PostMapping("/statsBySource")
     public JSONArray statsBySource(@RequestBody JSONObject citta, @RequestParam String source) throws ParamException, CityException {
         return service.statisticheSource(citta, source);
     }
 
-    @GetMapping("/statsByData")
+    @PostMapping("/statsByData")
     public JSONArray statsByData(@RequestBody JSONObject citta, @RequestParam String data) throws DataException, ParamException, CityException {
         return service.statisticheData(citta, data);
     }
 
-    @GetMapping("/statsByRemote")
+    @PostMapping("/statsByRemote")
     public JSONArray statsByRemote(@RequestBody JSONObject citta, @RequestParam String remoto) throws ParamException, CityException {
         return service.statisticheRemoto(citta, remoto);
     }

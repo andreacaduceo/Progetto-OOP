@@ -22,7 +22,7 @@ public class JobFinderAPI {
 
     BufferedReader buffer;
 
-    public JSONObject getJobs(URL url) throws IOException, ParseException {
+    private JSONObject getJobs(URL url) throws IOException, ParseException {
         String result;
         StringBuilder sb = new StringBuilder();
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -40,7 +40,7 @@ public class JobFinderAPI {
         return (JSONObject) parser.parse(result);
     }
 
-    public JSONObject getJobsLocation(String location) throws IOException, ParseException {
+    private JSONObject getJobsLocation(String location) throws IOException, ParseException {
         String urlString = "https://findwork.dev/api/jobs/?search=&source=&location=" + location;
         URL url = new URL(urlString);
         JobFinderAPI finderAPI = new JobFinderAPI();
