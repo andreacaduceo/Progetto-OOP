@@ -26,7 +26,6 @@ public class Service {
         return api.suggerisciLocation();
     }
 
-
     public JSONArray chiamataFiltrataPerContratto(JSONObject citta, String contratto) throws ParamException, CityException {
         return api.filteredByContract(citta, contratto);
     }
