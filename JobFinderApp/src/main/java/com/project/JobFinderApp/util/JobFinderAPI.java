@@ -65,6 +65,12 @@ public class JobFinderAPI {
         return obj;
     }
 
+    /**
+     *
+     * @param citta
+     * @return
+     * @throws CityException
+     */
     public JSONArray getMoreLocations(JSONObject citta) throws CityException {
         if(citta.get("Nomi delle città").toString().isEmpty()) throw new CityException();
         JobFinderAPI finderAPI = new JobFinderAPI();
@@ -85,6 +91,11 @@ public class JobFinderAPI {
         return result;
     }
 
+    /**
+     *
+     * @param arrayCitta
+     * @return
+     */
     public JSONArray estraiValori(JSONArray arrayCitta) {
         JSONArray results = new JSONArray();
         for (Object value : arrayCitta) {

@@ -19,7 +19,12 @@ public class Controller {
     @Autowired
     private Service service;
 
-
+    /**
+     * Metodo che restituisce localitò
+     * @param citta body da inserire nella richiesta
+     * @return  array con lavori
+     * @throws CityException eccezione lanciata se la città è vuota
+     */
     @PostMapping("/jobs")
     public JSONArray getByLocations(@RequestBody JSONObject citta) throws CityException {
         return service.chiamataPiuLocation(citta);

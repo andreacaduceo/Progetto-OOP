@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="753ccf07-7bfb-4497-a918-7d687db3e2d4" name="Changes" comment="Aggiunta Javadoc." />
+    <list default="true" id="753ccf07-7bfb-4497-a918-7d687db3e2d4" name="Changes" comment="Aggiunta Javadoc.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/util/JobFinderAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/util/JobFinderAPI.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Class" />
         <option value="UML Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -41,7 +46,7 @@
     <setting file="file://$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/util/Filtri.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="22vCVTsAcXEGNvTevlFiKF3inhb" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -64,7 +69,38 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.JobInfoTest.testCastingJSONObject">
+    <configuration name="JobInfoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JobFinderApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.JobFinderApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.JobFinderApp" />
+      <option name="MAIN_CLASS_NAME" value="com.project.JobFinderApp.JobInfoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JobInfoTest.testCastingJSONObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JobFinderApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.JobFinderApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.JobFinderApp" />
+      <option name="MAIN_CLASS_NAME" value="com.project.JobFinderApp.JobInfoTest" />
+      <option name="METHOD_NAME" value="testCastingJSONObject" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JobFinderAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="JobFinderApp" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.JobFinderApp.JobFinderAppApplication" />
@@ -72,6 +108,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.JobInfoTest.testCastingJSONObject" />
+        <item itemvalue="JUnit.JobInfoTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -111,6 +153,8 @@
       <workItem from="1642518119372" duration="1640000" />
       <workItem from="1642520059351" duration="558000" />
       <workItem from="1642520777665" duration="358000" />
+      <workItem from="1642528715235" duration="43000" />
+      <workItem from="1642528801269" duration="4169000" />
     </task>
     <task id="LOCAL-00002" summary="Aggiunta rotta per chiamate a una e a più location, implementazione della classe Model e filtraggio della response di findwork.">
       <created>1640797105704</created>
