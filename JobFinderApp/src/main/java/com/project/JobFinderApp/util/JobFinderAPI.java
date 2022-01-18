@@ -20,7 +20,7 @@ import java.util.Vector;
 
 public class JobFinderAPI {
 
-    BufferedReader buffer;
+    private BufferedReader buffer;
 
     private JSONObject getJobs(URL url) throws IOException, ParseException {
         String result;
@@ -64,7 +64,6 @@ public class JobFinderAPI {
         }
         return obj;
     }
-
 
     public JSONArray getMoreLocations(JSONObject citta) throws CityException {
         if(citta.get("Nomi delle città").toString().isEmpty()) throw new CityException();
@@ -131,7 +130,6 @@ public class JobFinderAPI {
         obj.put("Numero di lavori in queste città", numeroLavori);
         return obj;
     }
-
 
     public JSONArray filteredByContract(JSONObject citta, String contratto) throws ParamException, CityException {
         JSONArray array;

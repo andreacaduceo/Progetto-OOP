@@ -16,7 +16,7 @@ import java.io.IOException;
 @Component
 public class Service {
 
-    JobFinderAPI api = new JobFinderAPI();
+    private JobFinderAPI api = new JobFinderAPI();
 
     public JSONArray chiamataPiuLocation( JSONObject nomiCitta) throws CityException {
         return api.estraiValori(api.getMoreLocations(nomiCitta));

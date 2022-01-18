@@ -17,7 +17,7 @@ import java.io.IOException;
 public class Controller {
 
     @Autowired
-    Service service;
+    private Service service;
 
 
     @PostMapping("/jobs")

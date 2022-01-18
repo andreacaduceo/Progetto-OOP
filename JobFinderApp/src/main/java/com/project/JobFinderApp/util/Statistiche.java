@@ -23,7 +23,7 @@ public class Statistiche {
     }
 
 
-    public JSONArray calcolaStatistiche(Vector<String> nomiCitta, JSONArray response) {
+    private JSONArray calcolaStatistiche(Vector<String> nomiCitta, JSONArray response) {
         JSONArray result = new JSONArray();
         int indiceCitta = 0;
         for (String x : nomiCitta) {
