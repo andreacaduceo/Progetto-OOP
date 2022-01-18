@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="753ccf07-7bfb-4497-a918-7d687db3e2d4" name="Changes" comment="Aggiunta Javadoc.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="753ccf07-7bfb-4497-a918-7d687db3e2d4" name="Changes" comment="Aggiunta unità di test relativa al casting in JSONObject di un oggetto JobInfo.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/util/JobFinderAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/util/JobFinderAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/service/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/service/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/util/JobFinderAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/util/JobFinderAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/util/Statistiche.class" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/util/Statistiche.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +70,23 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
   </component>
-  <component name="RunManager" selected="JUnit.JobInfoTest.testCastingJSONObject">
+  <component name="RunManager" selected="JUnit.JobFinderAPITest.testEstraiValori">
+    <configuration name="JobFinderAPITest.testEstraiValori" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JobFinderApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.JobFinderApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.JobFinderApp" />
+      <option name="MAIN_CLASS_NAME" value="com.project.JobFinderApp.JobFinderAPITest" />
+      <option name="METHOD_NAME" value="testEstraiValori" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JobInfoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JobFinderApp" />
       <extension name="coverage">
@@ -110,6 +127,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JobFinderAPITest.testEstraiValori" />
         <item itemvalue="JUnit.JobInfoTest.testCastingJSONObject" />
         <item itemvalue="JUnit.JobInfoTest" />
       </list>
@@ -154,7 +172,7 @@
       <workItem from="1642520059351" duration="558000" />
       <workItem from="1642520777665" duration="358000" />
       <workItem from="1642528715235" duration="43000" />
-      <workItem from="1642528801269" duration="4169000" />
+      <workItem from="1642528801269" duration="6555000" />
     </task>
     <task id="LOCAL-00002" summary="Aggiunta rotta per chiamate a una e a più location, implementazione della classe Model e filtraggio della response di findwork.">
       <created>1640797105704</created>
@@ -296,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642517375192</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Aggiunta unità di test relativa al casting in JSONObject di un oggetto JobInfo.">
+      <created>1642537617088</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1642537617088</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +374,8 @@
     <MESSAGE value="Modificato scope di alcuni metodi." />
     <MESSAGE value="Piccole migliorie di codice." />
     <MESSAGE value="Aggiunta Javadoc." />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta Javadoc." />
+    <MESSAGE value="Aggiunta unità di test relativa al casting in JSONObject di un oggetto JobInfo." />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta unità di test relativa al casting in JSONObject di un oggetto JobInfo." />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
