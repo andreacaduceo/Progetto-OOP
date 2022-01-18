@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="753ccf07-7bfb-4497-a918-7d687db3e2d4" name="Changes" comment="Aggiunta Javadoc." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Class" />
+        <option value="UML Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="b7d5f8b32406688837ec427e8e7ce37dca96873d" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="SOFT" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/util/Filtri.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectId" id="22vCVTsAcXEGNvTevlFiKF3inhb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultPlantUmlFileTemplate" value="UML Class" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
+  </component>
+  <component name="RunManager">
+    <configuration name="JobFinderAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="JobFinderApp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.JobFinderApp.JobFinderAppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="Aggiunta rotta per chiamate a una e a più location, implementazione della classe Model.">
+      <created>1640707801412</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640707801412</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="753ccf07-7bfb-4497-a918-7d687db3e2d4" name="Changes" comment="Aggiunta rotta per chiamate a una e a più location, implementazione della classe Model." />
+      <created>1640708699576</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640708699576</updated>
+      <workItem from="1640708701324" duration="5091000" />
+      <workItem from="1640788282553" duration="8332000" />
+      <workItem from="1641223258156" duration="6295000" />
+      <workItem from="1641482544855" duration="3611000" />
+      <workItem from="1641489436791" duration="1668000" />
+      <workItem from="1641571734309" duration="3048000" />
+      <workItem from="1641581381747" duration="609000" />
+      <workItem from="1641828738459" duration="8767000" />
+      <workItem from="1641921519432" duration="10167000" />
+      <workItem from="1642002162346" duration="8031000" />
+      <workItem from="1642087633214" duration="9415000" />
+      <workItem from="1642434509988" duration="11125000" />
+      <workItem from="1642449075381" duration="2016000" />
+      <workItem from="1642500230772" duration="7054000" />
+      <workItem from="1642515837395" duration="135000" />
+      <workItem from="1642516010087" duration="622000" />
+      <workItem from="1642516697518" duration="45000" />
+      <workItem from="1642516772330" duration="147000" />
+      <workItem from="1642516932042" duration="130000" />
+      <workItem from="1642517152057" duration="948000" />
+      <workItem from="1642518119372" duration="1640000" />
+      <workItem from="1642520059351" duration="558000" />
+      <workItem from="1642520777665" duration="358000" />
+    </task>
+    <task id="LOCAL-00002" summary="Aggiunta rotta per chiamate a una e a più location, implementazione della classe Model e filtraggio della response di findwork.">
+      <created>1640797105704</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1640797105704</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Aggiunta rotta per chiamate a una e a più location, implementazione della classe Model e filtraggio della response di findwork.">
+      <created>1641223626202</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1641223626202</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Aggiunta rotta per chiamate a una e a più location, implementazione della classe Model e filtraggio della response di findwork.">
+      <created>1641227001609</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1641227001609</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Aggiunta rotta per il suggerimento di cinque città.">
+      <created>1641230183048</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1641230183048</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Modificato il filtraggio della response di findwork ed aggiunto il filtro per la ricerca a seconda del tipo di contratto.">
+      <created>1641486112477</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1641486112477</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Modificato il filtraggio della response di findwork ed aggiunto il filtro per la ricerca a seconda del tipo di contratto.">
+      <created>1641489831894</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1641489831894</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Aggiunto il filtro per la ricerca a seconda del parametro source.">
+      <created>1641572699493</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1641572699493</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Aggiunto il filtro per la ricerca a seconda del linguaggio indicato.">
+      <created>1641576601821</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1641576601821</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Aggiunta la classe statistiche, con la relativa rotta per le statistiche generali.">
+      <created>1641838526872</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1641838526872</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Modificato il metodo &quot;statisticheGenerali&quot; in modo da poterlo usare opportunamente con i filtri già implementati.">
+      <created>1641931878616</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1641931878616</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Aggiunto un nuovo parametro relativo al lavoro da remoto, su cui filtrare le statistiche ed anche statistiche filtrare per data.">
+      <created>1642017616800</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1642017616800</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Piccole migliorie del codice.">
+      <created>1642089596357</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1642089596357</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Aggiunta eccezione relativa al formato della data inserita.">
+      <created>1642095439977</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1642095439977</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Aggiunta eccezione per mancato inserimento del parametro.">
+      <created>1642097527011</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1642097527011</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Aggiunta eccezione per mancato o errato inserimento delle città nel body.">
+      <created>1642099224030</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1642099224030</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Corretto il lancio dell'eccezione relativa al body.">
+      <created>1642435803004</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1642435803004</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Modificato scope di alcuni metodi.">
+      <created>1642449152694</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1642449152694</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Modificato scope di alcuni metodi.">
+      <created>1642449361842</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1642449361842</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Piccole migliorie di codice.">
+      <created>1642508671147</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1642508671147</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Aggiunta Javadoc.">
+      <created>1642517375192</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1642517375192</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="26498866-fca1-436a-a985-cbd6a723775d">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Aggiunta rotta per chiamate a una e a più location, implementazione della classe Model." />
+    <MESSAGE value="Aggiunta rotta per chiamate a una e a più location, implementazione della classe Model e filtraggio della response di findwork." />
+    <MESSAGE value="Aggiunta rotta per il suggerimento di cinque città." />
+    <MESSAGE value="Modificato il filtraggio della response di findwork ed aggiunto il filtro per la ricerca a seconda del tipo di contratto." />
+    <MESSAGE value="Aggiunto il filtro per la ricerca a seconda del parametro source." />
+    <MESSAGE value="Aggiunto il filtro per la ricerca a seconda del linguaggio indicato." />
+    <MESSAGE value="Aggiunta la classe statistiche, con la relativa rotta per le statistiche generali." />
+    <MESSAGE value="Modificato il metodo &quot;statisticheGenerali&quot; in modo da poterlo usare opportunamente con i filtri già implementati." />
+    <MESSAGE value="Aggiunto un nuovo parametro relativo al lavoro da remoto, su cui filtrare le statistiche ed anche statistiche filtrare per data." />
+    <MESSAGE value="Piccole migliorie del codice." />
+    <MESSAGE value="Aggiunta eccezione relativa al formato della data inserita." />
+    <MESSAGE value="Aggiunta eccezione per mancato inserimento del parametro." />
+    <MESSAGE value="Aggiunta eccezione per mancato o errato inserimento delle città nel body." />
+    <MESSAGE value="Corretto il lancio dell'eccezione relativa al body." />
+    <MESSAGE value="Modificato scope di alcuni metodi." />
+    <MESSAGE value="Piccole migliorie di codice." />
+    <MESSAGE value="Aggiunta Javadoc." />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta Javadoc." />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.util.HashMap$Node" memberName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="results" />
+        <watch expression="app.entrySet().toArray()[2]" />
+        <watch expression="((org.json.simple.JSONObject)ob).entrySet().toArray()[0]" custom="org.json.simple.JSONObject" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
