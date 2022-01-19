@@ -169,7 +169,7 @@ public class JobFinderAPI {
         JSONObject obj = new JSONObject();
         Vector<String> location = new Vector<>();
         location.add("London");
-        location.add("Copenaghen");
+        location.add("Copenhagen");
         location.add("Madrid");
         location.add("Paris");
         location.add("Amsterdam");
