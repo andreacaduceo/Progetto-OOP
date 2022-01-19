@@ -10,7 +10,7 @@ import org.junit.jupiter.api.BeforeEach;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Classe che gestisce i test relativi al metodo estraiValori della classe JobFinderAPI.
+ * Classe che si occupa di testare il metodo estraiValori della classe JobFinderAPI.
  */
 
 

@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="753ccf07-7bfb-4497-a918-7d687db3e2d4" name="Changes" comment="Aggiunta unità di test relativa al casting in JSONObject di un oggetto JobInfo.">
+    <list default="true" id="753ccf07-7bfb-4497-a918-7d687db3e2d4" name="Changes" comment="Aggiunta unità di test per il metodo estraiValori della classe JobFinderAPI.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/service/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/service/Service.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/util/JobFinderAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/util/JobFinderAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/util/Statistiche.class" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/util/Statistiche.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/exception/CityException.java" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/exception/CityException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/exception/DataException.java" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/exception/DataException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/exception/ParamException.java" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/exception/ParamException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/model/JobInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/model/JobInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/util/Filtri.java" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/util/Filtri.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/util/JobFinderAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/util/JobFinderAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/util/Statistiche.java" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/src/main/java/com/project/JobFinderApp/util/Statistiche.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobFinderApp/src/test/java/com/project/JobFinderApp/JobFinderAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/src/test/java/com/project/JobFinderApp/JobFinderAPITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobFinderApp/src/test/java/com/project/JobFinderApp/JobInfoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/src/test/java/com/project/JobFinderApp/JobInfoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +180,8 @@
       <workItem from="1642520059351" duration="558000" />
       <workItem from="1642520777665" duration="358000" />
       <workItem from="1642528715235" duration="43000" />
-      <workItem from="1642528801269" duration="6555000" />
+      <workItem from="1642528801269" duration="7021000" />
+      <workItem from="1642589052567" duration="10851000" />
     </task>
     <task id="LOCAL-00002" summary="Aggiunta rotta per chiamate a una e a più location, implementazione della classe Model e filtraggio della response di findwork.">
       <created>1640797105704</created>
@@ -321,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642537617088</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Aggiunta unità di test per il metodo estraiValori della classe JobFinderAPI.">
+      <created>1642542254585</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1642542254585</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,7 +391,8 @@
     <MESSAGE value="Piccole migliorie di codice." />
     <MESSAGE value="Aggiunta Javadoc." />
     <MESSAGE value="Aggiunta unità di test relativa al casting in JSONObject di un oggetto JobInfo." />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta unità di test relativa al casting in JSONObject di un oggetto JobInfo." />
+    <MESSAGE value="Aggiunta unità di test per il metodo estraiValori della classe JobFinderAPI." />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta unità di test per il metodo estraiValori della classe JobFinderAPI." />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
