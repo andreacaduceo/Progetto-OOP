@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.project.JobFinderApp"},{"l":"com.project.JobFinderApp.controller"},{"l":"com.project.JobFinderApp.exception"},{"l":"com.project.JobFinderApp.model"},{"l":"com.project.JobFinderApp.service"},{"l":"com.project.JobFinderApp.util"}];updateSearchResults();

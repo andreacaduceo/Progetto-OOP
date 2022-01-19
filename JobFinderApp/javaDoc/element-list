@@ -1,0 +1,6 @@
+com.project.JobFinderApp
+com.project.JobFinderApp.controller
+com.project.JobFinderApp.exception
+com.project.JobFinderApp.model
+com.project.JobFinderApp.service
+com.project.JobFinderApp.util
