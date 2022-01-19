@@ -3,8 +3,8 @@ Lo scopo di questa applicazione è di permettere all'utente di trovare facilment
 
 ## Indice:
 
- - [*Introduzione e diagrammi UML*](https://github.com/andreacaduceo/Progetto-OOP#Introduzione%20e%20diagrammi%20UML)
- - [*Rotte disponibili*](https://github.com/andreacaduceo/Progetto-OOP#Rotte%20Disponibili)
+ - [*Introduzione e diagrammi UML*](https://github.com/andreacaduceo/Progetto-OOP#introduzione-e-diagrammi)
+ - [*Rotte disponibili*](https://github.com/andreacaduceo/Progetto-OOP#Rotte-Disponibili)
 - [*Test*](https://github.com/andreacaduceo/Progetto-OOP#Test)
 - [*Documentazione*](https://github.com/andreacaduceo/Progetto-OOP#Documentazione)
 
@@ -97,3 +97,4 @@ A seguito di tale chiamata riceveremo un JSONArray di risposta come questo:
 *Eccezioni*
 
  - CityException: qualora il JSONObject nel body abbia valore nullo o una delle città inserite non è presente nel database di FindWork.
+
