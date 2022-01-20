@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="753ccf07-7bfb-4497-a918-7d687db3e2d4" name="Changes" comment="Aggiunta JavaDoc.">
+    <list default="true" id="753ccf07-7bfb-4497-a918-7d687db3e2d4" name="Changes" comment="Piccola correzione di codice.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/JobFinderAppApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/JobFinderAppApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/exception/CityException.class" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/exception/CityException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/exception/DataException.class" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/exception/DataException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/exception/ParamException.class" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/exception/ParamException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/model/JobInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/model/JobInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/service/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/service/Service.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/util/Filtri.class" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/util/Filtri.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/util/JobFinderAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/util/JobFinderAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/util/Statistiche.class" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/target/classes/com/project/JobFinderApp/util/Statistiche.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobFinderApp/target/test-classes/com/project/JobFinderApp/JobInfoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/JobFinderApp/target/test-classes/com/project/JobFinderApp/JobInfoTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +173,9 @@
       <workItem from="1642589052567" duration="11299000" />
       <workItem from="1642603528636" duration="68000" />
       <workItem from="1642607794756" duration="2451000" />
-      <workItem from="1642614983215" duration="2318000" />
+      <workItem from="1642614983215" duration="3277000" />
+      <workItem from="1642675200679" duration="3511000" />
+      <workItem from="1642692926889" duration="2122000" />
     </task>
     <task id="LOCAL-00002" summary="Aggiunta rotta per chiamate a una e a più location, implementazione della classe Model e filtraggio della response di findwork.">
       <created>1640797105704</created>
@@ -346,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642603223534</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Piccola correzione di codice.">
+      <created>1642620416900</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1642620416900</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,7 +401,8 @@
     <MESSAGE value="Aggiunta unità di test relativa al casting in JSONObject di un oggetto JobInfo." />
     <MESSAGE value="Aggiunta unità di test per il metodo estraiValori della classe JobFinderAPI." />
     <MESSAGE value="Aggiunta JavaDoc." />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta JavaDoc." />
+    <MESSAGE value="Piccola correzione di codice." />
+    <option name="LAST_COMMIT_MESSAGE" value="Piccola correzione di codice." />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
