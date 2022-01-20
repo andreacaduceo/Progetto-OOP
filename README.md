@@ -108,7 +108,7 @@ Durante l'utilizzo di questa chiamata si possono verificare degli errori, qualor
  - **CityException**: qualora il JSONObject nel body abbia valore nullo o una delle città inserite non è presente nel database di FindWork.
 
 ## /jobsByContract
-La rotta "/jobsByContract" è di tipo `POST`, per un corretto funzionamento ha bisogno di ricevere un *body* come quello visto per la rotta precedente (`/jobs`) e di un *parametro* `contratto`, che può essere: `part time`o `full time`.
+La rotta "/jobsByContract" è di tipo `POST`, per un corretto funzionamento ha bisogno di ricevere un *body* come quello visto per la rotta precedente (`/jobs`) e di un *parametro* `contratto`, che può essere: *part time* o *full time*.
 Lo scopo di questa rotta è di mostrare i lavori full-time/part-time presenti nelle città indicate nel JSONObject. Un esempio di questa chiamata è il seguente:
 
 ![enter image description here](https://i.imgur.com/2CgVr5o.png)
@@ -230,6 +230,6 @@ L'applicazione presenta anche due unità di test, consultabili [qui](https://git
 
 ##  Autori
 *🟦* ***Caduceo Andrea***
-*🟥* ***Quaglia Claudio***
 
+*🟥* ***Quaglia Claudio***
 
